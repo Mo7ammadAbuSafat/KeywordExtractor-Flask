@@ -6,7 +6,7 @@ app = Flask(__name__)
 keyword_extractor = KeywordExtractor()
 
 
-@app.route('/process_text', methods=['GET'])
+@app.route('/keywords', methods=['GET'])
 async def process_text():
     text = request.args.get('text')
     result = await keyword_extractor.extract(text)
